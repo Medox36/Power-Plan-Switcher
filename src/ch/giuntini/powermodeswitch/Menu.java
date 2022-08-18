@@ -13,7 +13,7 @@ public class Menu extends PopupMenu {
 
     public Menu(TrayIco ico) {
         try {
-            PowerModesReader p = new PowerModesReader();
+            PowerPlanReader p = new PowerPlanReader();
             arr = p.readFile();
             for (String[] strings : arr) {
                 MenuItem item = new MenuItem(strings[1]);

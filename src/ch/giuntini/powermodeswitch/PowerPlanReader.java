@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class PowerModesReader {
+public class PowerPlanReader {
 
-    public PowerModesReader() throws IOException {
+    public PowerPlanReader() throws IOException {
         File file = new File("powercfg.txt");
         if (!file.exists()) {
             Path filePath = file.toPath();
