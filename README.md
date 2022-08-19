@@ -14,7 +14,7 @@ Or using the command prompt or powershell with this command: `powercfg -l`
 ## Quick Start Guide
 1. First you download the installer and complete the installer process or the program itself and save it to a location you want.  
 2. Then you start the program, by double-clicking, you should se the icon below appear in your system tray.  
-<img src="resources/ch/giuntini/powermodeswitch/images/ico.png" width="50">
+<img src="resources/ch/giuntini/powermodeswitch/images/ico.png" width="50"></img>
 3. Right-click on the icon and a menu will appear. At the top there are the different power plans from your system. 
 Followed by the active power plan, the option to edit the config file and exit the program. 
 4. Now you ar good to go. *The following steps are optional.*
