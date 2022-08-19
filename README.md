@@ -23,7 +23,7 @@ Followed by the active power plan, the option to edit the config file and exit t
 6. In that file there are all your power plans currently on your system, with their UUID and name. 
 Simply edit the name and restart the program.  
 Changing the names can be useful if the names of the system are long in length or for recognise them faster.
-7. If you want the program to run on startup simply create a link for the program. Then press `Windows-Key + R`, type in shell:startup and press `Enter`.
+7. If you want the program to run on startup simply create a link for the program. Then press `Windows-Key + R`, type in `shell:startup` and press `Enter`.
 Then move your previously created link in that folder and the program should now start at startup.
 
 ## Downloads
