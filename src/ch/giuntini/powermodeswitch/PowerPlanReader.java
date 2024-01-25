@@ -64,7 +64,7 @@ public class PowerPlanReader {
         String s = br.lines().toList().get(0);
         br.close();
 
-        return s.substring(s.indexOf(":"), s.indexOf(".")).trim();
+        return s.substring(s.indexOf(":") + 1, s.indexOf(".")).trim();
     }
 
     public String[][] readFile() throws IOException {
