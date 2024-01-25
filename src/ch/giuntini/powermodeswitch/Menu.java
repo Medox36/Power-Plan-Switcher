@@ -1,5 +1,6 @@
 package ch.giuntini.powermodeswitch;
 
+import javax.swing.SwingUtilities;
 import java.awt.Desktop;
 import java.awt.MenuItem;
 import java.awt.PopupMenu;
@@ -17,12 +18,11 @@ public class Menu extends PopupMenu {
             arr = p.readFile();
             for (String[] strings : arr) {
                 MenuItem item = new MenuItem(strings[1]);
-                item.setActionCommand(strings[0]);
                 item.addActionListener(e -> {
                     try {
-                        Runtime.getRuntime().exec("powercfg -setactive " + e.getActionCommand());
-                        updateActive();
-                    } catch (IOException ex) {
+                        Process process = Runtime.getRuntime().exec("powercfg -setactive " + strings[0]);
+                        process.onExit().thenRun(this::updateActive);
+                    } catch (Exception ex) {
                         throw new RuntimeException(ex);
                     }
                 });
@@ -42,9 +42,7 @@ public class Menu extends PopupMenu {
             }
         });
         MenuItem item6 = new MenuItem("exit");
-        item6.addActionListener(e -> {
-            ico.close();
-        });
+        item6.addActionListener(e -> ico.close());
         addSeparator();
         add(item4);
         addSeparator();
@@ -64,13 +62,18 @@ public class Menu extends PopupMenu {
             BufferedReader br = p.inputReader();
             String res = br.readLine();
             br.close();
+            String text = "";
             for (String[] strings : arr) {
                 if (res.contains(strings[0])) {
-                    item4.setLabel("Active: " + strings[1]);
-                    return;
+                    text = "Active: " + strings[1];
+                    break;
                 }
             }
-            item4.setLabel("Active: none");
+            if (text.isBlank()) {
+                text = "Active: none";
+            }
+            String finalText = text;
+            SwingUtilities.invokeLater(() -> item4.setLabel(finalText));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

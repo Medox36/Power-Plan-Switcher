@@ -27,29 +27,4 @@ Changing the names can be useful if the names of the system are long in length o
 Then move your previously created shortcut in that folder and the program should now start at startup.
 
 ## Downloads
-The Installer is recommended. **Note: installers are not yet made, will be updated when they can be downloaded.**  
-The Program itself is more of a portable version.
-
-### Program
-#### JAR
-[Power Plan Switcher.jar](https://downloads.giuntini.ch/jar/Power%20Plan%20Switcher.jar)  
-> MD5: 0a315c8c522af7368b309ae51ad5347a  
-> SHA256: 2c44d3e1709f6673634a2842c94a4c77a668e8c7972eace3fa3969fbe821bf6f
-
-#### EXE
-[Power Plan Switcher.exe](https://downloads.giuntini.ch/exe/Power%20Plan%20Switcher.exe)  
-> MD5: a660a95846df17394535415485fc1d0c  
-> SHA256: 2e742b3733b66564c12cf8f7d08c4c173085d9a60b3f64d0b0e424710ccf435f
-
----
-
-### Installer
-#### EXE
-[Power Plan Switcher.exe]()
-> MD5:   
-> SHA256:
-
-#### MSI
-[Power Plan Switcher.msi]()
-> MD5:   
-> SHA256: 
+You can download the Application via Releases here on GitHub
